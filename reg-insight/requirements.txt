@@ -1,0 +1,8 @@
+streamlit>=1.50
+pandas>=2.2
+plotly>=5.22
+rapidfuzz>=3.9
+pycountry>=24.6
+feedparser>=6.0
+requests>=2.32
+anthropic>=0.40
