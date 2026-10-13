@@ -2,14 +2,18 @@
 
 Lancement : streamlit run main.py
 """
+from pathlib import Path
+
 import streamlit as st
 
 from core import storage
 
+ROOT = Path(__file__).resolve().parent  # fonctionne même si l'app est dans un sous-dossier du dépôt
+
 st.set_page_config(page_title="REG-INSIGHT", page_icon=":material/shield:", layout="wide")
 storage.ensure_all()
 
-st.logo("assets/logo.svg", size="large")
+st.logo(str(ROOT / "assets" / "logo.svg"), size="large")
 
 pages = {
     "Veille": [
